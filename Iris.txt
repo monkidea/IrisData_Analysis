@@ -1,0 +1,34 @@
+#import load_iris function from datasets module
+from sklearn.datasets import load_iris
+
+#save "bunch" object containing iris dataset and its attributes
+iris = load_iris()
+type(iris)
+
+#print the iris data
+print(iris.data)
+
+#print the name of the four features
+print(iris.feature_names)
+
+#print integer representing the species of each observation
+print(iris.target)
+
+#print the encoding scheme for the species: 0 = setosa, 1 = versicolor,2 = viginica
+print(iris.target_names)
+
+#check the types of the features and response
+print(type(iris.data))
+print(type(iris.target))
+
+#check the shape of the features(first dimensions = number of observation, second observation = number of features)
+print(iris.data.shape)
+
+#check the shape of the response(single dimensions matching the number of observation)
+print(iris.target.shape)
+
+#store feature matrix in "X"
+X = iris.data
+
+#store feature matrix in "Y"
+Y = iris.target
